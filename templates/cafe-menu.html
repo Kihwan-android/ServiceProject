@@ -1,0 +1,76 @@
+{% extends "top-nav.html"  %}
+{% block title %}
+<title>메뉴 관리</title>
+{% endblock %}
+
+{% block preScript %}
+<script>
+    getMenus("cafe-0001");
+    getCategory("cafe-0001");
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div id="menu-side-nav" class="sidenav">
+  <h2><strong>CATEGORY</strong></h2>
+  <div onclick="viewMenu('.menu-card')">전체</div>
+<!--  <div onclick="viewMenu('.category-0001')" value="category-0001">콜드브루</div>-->
+<!--  <div onclick="viewMenu('.category-0002')" value="category-0002">에스프레소</div>-->
+<!--  <div onclick="viewMenu('.category-0003')" value="category-0003">쥬스</div>-->
+<!--  <div onclick="viewMenu('.category-0004')" value="category-0004">티</div>-->
+  <br id="blank-category">
+  <div id="add-category" value="5" onclick="toggleCategory()">+ category</div>
+  <div id="add-category-box" style="display: none">
+    <input id="input-category" type="text" style="width: 100%; margin-bottom: 10px; color: black;">
+    <button id="btn-add-category" onclick="addCategory()" style="color: black; float: right; width: 30%">등록</button>
+  </div>
+</div>
+
+<!--<div class="menu-board"-->
+<!--     style="margin-left: 25%; height: auto">-->
+
+<!--  <div id="cards-box" class="card-columns" style="margin: 0 10% 0 25%">-->
+
+<!--<div class="card" style="width: 65%; border: 1px solid darkslategrey">-->
+<!--  <img class="card-img-top"-->
+<!--       src="../static/img/coffee/juice/orange-juice.jpg"-->
+<!--       alt="Card image cap">-->
+<!--  <div class="card-body" style="padding: 10px 0; background-color: #3b3636;">-->
+<!--    <p class="card-text" style="text-align: center; color: white; background-color: #3b3636">오렌지 쥬스</p>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--    -->
+<!--  </div>-->
+
+<!--</div>-->
+
+
+<div class="container" style="margin: 0 0 0 25%">
+  <div class="row" id="menu-board">
+
+    <!--    <div class="col-md-6 col-lg-4 col-xl-3 py-2">-->
+    <!--      <div class="card h-100" style="border: 1px solid darkslategrey">-->
+    <!--        <img class="card-img-top img-fluid" src="../static/img/coffee/juice/orange-juice.jpg" alt="Card image cap">-->
+    <!--        <div class="card-block" style="padding: 10px 0; background-color: #3b3636;">-->
+    <!--          <p class="card-text" style="text-align: center; color: white; background-color: #3b3636">오렌지 쥬스</p>-->
+    <!--          <p class="card-text" style="text-align: center; color: white; background-color: #3b3636">3800원</p>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+
+  </div>
+</div>
+
+
+<!--&lt;!&ndash;<button onclick="getMenus('카페아이디')" class="testBtn"> 메뉴 버튼</button>&ndash;&gt;-->
+<!--<button onclick="test2()" class="testBtn"> 메뉴 버튼</button>-->
+<!--<br>-->
+<!--<div id="menuList">-->
+<!--  <div>-->
+<!--    메뉴 리스트 입니다.-->
+<!--  </div>-->
+<!--</div>-->
+
+{% endblock %}

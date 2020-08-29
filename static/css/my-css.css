@@ -1,0 +1,109 @@
+.column {
+    float: left;
+    width: 100%;
+}
+
+.crop {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.crop img {
+    max-height: initial;
+    max-width: initial;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sidenav {
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 200px;
+    left: 10px;
+    background: #2f2e2ea0;
+    overflow-x: hidden;
+    padding: 8px 0;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #eee;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #2196F3;
+}
+
+.sidenav div {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #eee;
+    display: block;
+}
+
+.sidenav div:hover {
+    color: #2196F3;
+    cursor: pointer;
+}
+
+.sidenav h2 {
+    color: #fff;
+    margin-left: 10px;
+}
+
+.sidenav h2::before {
+    position: absolute;
+    content: "";
+    background: #d43031;
+    height: 2px;
+    width: 400px;
+    bottom: 0;
+    margin-left: -200px;
+    left: 50%;
+}
+
+.btn-accept {
+    color: #fff;
+    font-size: 20px;
+    background-color: #2f2e2ea0;
+    border-color: #2f2e2ea0;
+}
+
+.btn-reject {
+    color: #fff;
+    font-size: 20px;
+    background-color: #2f2e2ea0;
+    border-color: #2f2e2ea0;
+}
+
+.btn-accept:hover {
+    color: #fff;
+    font-size: 20px;
+    background-color: #3b3636;
+    border-color: #3b3636;
+}
+
+.order-font {
+  font-size: 15px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 15px;
+    }
+}

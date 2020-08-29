@@ -1,0 +1,36 @@
+{% extends "top-nav.html" %}
+
+{% block title %}
+<title>주문 현황</title>
+{% endblock %}
+
+{% block preScript %}
+<script>
+    getOrderLists("cafe-0001", 3);
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="sidenav">
+  <h2><strong>CATEGORY</strong></h2>
+  <div onclick="viewOrderList(3)">전체</div>
+  <div onclick="viewOrderList(0)">접수 대기중</div>
+  <div onclick="viewOrderList(1)">픽업 대기중</div>
+  <div onclick="viewOrderList(2)">픽업 완료</div>
+  <div onclick="viewOrderList(-1)">주문 취소</div>
+</div>
+
+
+<div class="row">
+  <div class="column">
+    <div class="container">
+      <div class="row " id="order_list">
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
