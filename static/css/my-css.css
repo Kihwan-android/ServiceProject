@@ -73,25 +73,24 @@
     left: 50%;
 }
 
-.btn-accept {
+.btn-order-list {
     color: #fff;
     font-size: 20px;
     background-color: #2f2e2ea0;
     border-color: #2f2e2ea0;
+    font-weight: bold;
 }
 
-.btn-reject {
-    color: #fff;
-    font-size: 20px;
-    background-color: #2f2e2ea0;
-    border-color: #2f2e2ea0;
+.ready .row:nth-of-type(2) button:nth-of-type(1):hover {
+    background-color: lightskyblue;
 }
 
-.btn-accept:hover {
-    color: #fff;
-    font-size: 20px;
-    background-color: #3b3636;
-    border-color: #3b3636;
+.ready .row:nth-of-type(2) button:nth-of-type(2):hover {
+    background-color: palevioletred;
+}
+
+.accept div button:hover {
+    background-color: lightgreen;
 }
 
 .order-font {
@@ -106,4 +105,21 @@
     .sidenav a {
         font-size: 15px;
     }
+}
+
+#add-image:hover {
+    cursor: pointer;
+}
+
+.review-item {
+    width: 100%;
+    height: 300px;
+    color: whitesmoke;
+    font-size: 20px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.review-item th,td {
+    border: 2px solid white;
 }

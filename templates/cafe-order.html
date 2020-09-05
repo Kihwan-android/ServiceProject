@@ -6,7 +6,7 @@
 
 {% block preScript %}
 <script>
-    getOrderLists("cafe-0001", 3);
+    getOrders("cafe-0001");
 </script>
 {% endblock %}
 
@@ -14,11 +14,11 @@
 
 <div class="sidenav">
   <h2><strong>CATEGORY</strong></h2>
-  <div onclick="viewOrderList(3)">전체</div>
-  <div onclick="viewOrderList(0)">접수 대기중</div>
-  <div onclick="viewOrderList(1)">픽업 대기중</div>
-  <div onclick="viewOrderList(2)">픽업 완료</div>
-  <div onclick="viewOrderList(-1)">주문 취소</div>
+  <div onclick="viewOrders(3)">전체</div>
+  <div onclick="viewOrders(0)">접수 대기중</div>
+  <div onclick="viewOrders(1)">픽업 대기중</div>
+  <div onclick="viewOrders(2)">픽업 완료</div>
+  <div onclick="viewOrders(-1)">주문 취소</div>
 </div>
 
 

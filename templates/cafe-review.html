@@ -3,7 +3,35 @@
 <title>리뷰</title>
 {% endblock %}
 
-{% block content %}
+{% block preScript %}
+<script>
+    getReviews("cafe-0001");
+</script>
+{% endblock %}
 
+{% block content %}
+<div class="row">
+  <div class="column">
+    <div class="container">
+      <div class="row " id="review-board">
+
+<!--        <table class="review-item">-->
+<!--          <tr>-->
+<!--            <td>2020-09-02 14:14:14</td>-->
+<!--            <td>유저 닉네임</td>-->
+<!--            <td>4.5</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td rowspan="3" style="width: 15%;">-->
+<!--              <img class="card-img-top img-fluid" src="../static/img/coffee/juice/mango-juice.jpg" style="height: auto"/>-->
+<!--            </td>-->
+<!--            <td rowspan="3" colspan="2">분위기가 정말 좋았어요~</td>-->
+<!--          </tr>-->
+<!--        </table>-->
+
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
