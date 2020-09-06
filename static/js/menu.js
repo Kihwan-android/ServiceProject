@@ -128,11 +128,6 @@ function setImage(input) {
 function addMenu(cafeId) {
     let files = $("#upload-image")[0].files[0];
 
-    console.log(files);
-    console.log($("#add-menu").attr("value").split(".")[1]);
-    console.log($("#input-menu-name").val());
-    console.log($("#input-menu-price").val());
-
     let url = `/menu/add`;
     let data = new FormData();
     data.append("cafeId", cafeId);

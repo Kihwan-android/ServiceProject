@@ -1,6 +1,8 @@
 from pymongo import MongoClient
 import os
 from flask import Flask, render_template, jsonify, request
+import smtplib
+from email.mime.text import MIMEText
 
 app = Flask(__name__)
 
@@ -106,12 +108,6 @@ def addMenu():
     menuPrice = request.form.get('menuPrice')
     files = request.files.getlist("file")
 
-    print(cafeId)
-    print(categoryId)
-    print(menuId)
-    print(menuName)
-    print(menuPrice)
-
     location = "..\static\img\coffee\\" + categoryId + "\\"
 
     target = os.path.join(APP_ROOT, "static\img\coffee\\" + categoryId + "\\")
@@ -121,7 +117,6 @@ def addMenu():
 
     print(files)
 
-    # for file in request.files.getlist("file"):
     for file in files:
         filename = file.filename
         location += filename
@@ -196,6 +191,29 @@ def login():
         return jsonify({"code": 200})
     else:
         return jsonify({"code": 204})
+
+
+@app.route('/contact/send', methods=['POST'])
+def send():
+    cafeId = request.form.get("cafeId")
+    cafeName = request.form.get("cafeName")
+    cafeEmail = request.form.get("cafeEmail")
+    require = request.form.get("require")
+
+    s = smtplib.SMTP("smtp.gmail.com", 587)
+
+    s.starttls()
+    s.login("rlrkf2420@gmail.com", "qeynayuwuuesjagu")
+
+    msg = MIMEText(require)
+    msg["Subject"] = cafeName+"에서 보낸 메일"
+
+    s.sendmail(cafeEmail, "rlrkf2420@gmail.com", msg.as_string())
+
+    s.quit()
+
+    return jsonify({"code": 200})
+
 
 
 if __name__ == '__main__':
