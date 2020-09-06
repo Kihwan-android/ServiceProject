@@ -24,7 +24,8 @@ function makeOrders(orders) {
 function ordersHtml(orderInfo) {
     let customerInfo = orderInfo["customer"];
     let orderSheetInfo = orderInfo["orderSheet"];
-    let bgColor, btnHtml, status;
+    let bgColor, status;
+    let btnHtml = ``;
 
     switch (orderInfo["orderStatus"]) {
         case -1:
@@ -86,7 +87,7 @@ function ordersHtml(orderInfo) {
                 <div class="text-center">
                   <h1 style="margin-left: 15px; margin-top: 10px; color: black"><strong>주문서</strong></h1>
                 </div>
-                <table class="table table-hover order-font" style="margin-left: 15px; margin-right: 15px">
+                <table class="table table-hover order-font" style="margin-left: 15px; margin-right: 0px; width: 95%;">
                   <thead>
                   <tr>
                     <th>메뉴</th>
@@ -96,7 +97,7 @@ function ordersHtml(orderInfo) {
                   </tr>
                   </thead>
                   <tbody>
-                  ${getOrderMenus(orderSheetInfo["menus"])}
+                    ${getOrderMenus(orderSheetInfo["menus"])}
                   <tr>
                     <td>&nbsp</td>
                     <td>&nbsp</td>

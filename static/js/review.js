@@ -22,13 +22,13 @@ function makeReviews(review) {
 
     let reviewHtml = `
     <table class="review-item">
-      <tr>
-        <td>${date}</td>
-        <td>${nickname}</td>
-        <td>${score}</td>
+      <tr style="border: 2px solid white;">
+        <td style="border: 2px solid white;">${date}</td>
+        <td style="border: 2px solid white;">${nickname}</td>
+        <td style="border: 2px solid white;">${score}</td>
       </tr>
-      <tr>
-        <td rowspan="3" style="width: 15%;">
+      <tr style="border: 2px solid white;">
+        <td rowspan="3" style="width: 15%; border: 2px solid white;">
           <img class="card-img-top img-fluid" src="${imageUrl}" style="height: auto"/>
         </td>
         <td rowspan="3" colspan="2">${description}</td>
