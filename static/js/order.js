@@ -163,7 +163,7 @@ function accept(cafeId, orderId) {
         success: function (response) {
             console.log(response);
             if(response["code"] == 200) {
-
+                location.reload();
             }
         }
     })
@@ -176,7 +176,9 @@ function reject(cafeId, orderId) {
         url: url,
         data: {},
         success: function (response) {
-            console.log(response);
+            if(response["code"] == 200) {
+                location.reload();
+            }
         }
     })
 }
@@ -188,7 +190,9 @@ function pickUp(cafeId, orderId) {
         url: url,
         data: {},
         success: function (response) {
-            console.log(response);
+            if(response["code"] == 200) {
+                location.reload();
+            }
         }
     })
 }
